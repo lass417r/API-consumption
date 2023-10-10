@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>API consumption</title>
+  </head>
+  <body>
+    <header class="container">
+      <h1>API consumption</h1>
+    </header>
+
+    <main>
+      <form class="boxed">
+        <div>
+          <label for="txtTown">Town</label>
+          <input type="text" name="txtTown" id="txtTown" maxlength="80" />
+        </div>
+        <div>
+          <button type="submit" name="btnTownInfo" id="btnTownInfo">
+            Town Information
+          </button>
+          <span class="hidden alert" id="errorMessage"></span>
+        </div>
+      </form>
+      <section class="boxed" id="weatherInfo">
+        <div id="weather">
+          <h4 id="townName"></h4>
+          <h5 id="mainWeather"></h5>
+          <span id="temperature"></span> &deg;C (feels like
+          <span id="feelsLike"></span> &deg;C)<br />
+          Humidity: <span id="humidity"></span>%<br />
+          Wind speed: <span id="wind"></span> m/s
+        </div>
+        <img id="map" />
+      </section>
+      <section class="boxed" id="eventInfo">
+        <div id="eventHeader">Events</div>
+        <div id="eventList"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2023 Lasse Godtkjær</p>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
